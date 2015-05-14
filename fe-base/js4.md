@@ -1,182 +1,159 @@
-# CSS、CSS选择器
-CSS全称是 Cascading Style Sheets，翻译过来就是层叠样式表
+# ajax, jsonp, jquery ajax
 
-## 引入方式
-
-CSS的引入一般有三种
-
-### 外部资源引入
-
-	<link rel="stylesheet" type="text/css" href="xxx.css">
-
-### style标签
-
-	<style type="text/css">
-   div{
-		color: red;
-		font-size:12px;
-	 }
-	</style>
-
-### 内联style属性
-
-	<div style="color:red; font-size:12px;">123</div>
+AJAX = Asynchronous JavaScript and XML 异步的 JavaScript 和 XML
+通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
 
 
-## 常用选择器
-#### 1、id选择器
-选择设置id的元素
 
-    <style>
-        #div1{
-            color: red;
+### 看代码
+    var xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function(){
+        if (xmlhttp.readyState==4 && xmlhttp.status==200){
+            document.getElementById("myDiv1").innerHTML=xmlhttp.responseText;
         }
-    </style>
-    <div>div</div>
-    <div id="div1">div1</div>
-    <div id="div2">div2</div>
-
-#### 2、class选择器
-选择有相同class的元素
-
-    <style>
-        .c1{
-            color: red;
-        }
-        .c2{
-            background-color: yellow;
-        }
-    </style>
-    <div class="c1 c2">c1, c2</div>
-    <div class="c2">c2</div>
-    <div class="c1">c1</div>
-
-#### 3、属性选择器
-以某个属性做为选择依据
-
-    input[type="text"]
-    {
-      width:150px;
-      display:block;
-      margin-bottom:10px;
-      background-color:yellow;
-      font-family: Verdana, Arial;
     }
+    xmlhttp.open("GET","ajax_simple.php",true);
+    xmlhttp.send();
 
-    input[type="button"]
-    {
-      width:120px;
-      margin-left:35px;
-      display:block;
-      font-family: Verdana, Arial;
+[演示地址](http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/24-ajax/code/index.html)
+
+1. 创对象
+2. 绑事件
+3. 给参数
+4. 发送
+ 
+ #### readystatechange 事件
+当请求被发送到服务器时，我们需要执行一些基于响应的任务。
+每当 readyState 改变时，就会触发 readystatechange 事件。
+readyState 属性存有 XMLHttpRequest 的状态信息。
+下面是 XMLHttpRequest 对象的三个重要的属性：
+
+`onreadystatechange` : 存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。|
+
+`readyState` :  XMLHttpRequest 的状态。从 0 到 4 发生变化。
+
+- 0: 请求未初始化
+- 1: 服务器连接已建立
+- 2: 请求已接收
+- 3: 请求处理中
+- 4: 请求已完成，且响应已就绪
+
+`status` : 
+
+- 200: "OK"
+- 404: 未找到页面
+
+
+在 onreadystatechange 事件中，我们规定当服务器响应已做好被处理的准备时所执行的任务。
+当 readyState 等于 4 且状态为 200 时，表示响应已就绪：
+```    
+    xmlhttp.onreadystatechange=function(){
+        console.log(xmlhttp.readyState);
+        console.log(xmlhttp.status);
+        if (xmlhttp.readyState==4 && xmlhttp.status==200){
+            document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+        }
     }
+```
+ 
+#### open方法
+open(method,url,async)  
 
+- 规定请求的类型、URL 以及是否异步处理请求。
+- method：请求的类型；GET 或 POST
+- url：文件在服务器上的位置
+- async：true（异步）或 false（同步）
 
-#### 4、分组选择器
-可以对选择器进行分组，被分组的选择器对应的元素就有相同的样式。
-用逗号将需要分组的选择器分开。
-    
-    <style>
-        h1, .p1{
-          color: red;
-        }
-    </style>
+#### send方法
+send(string)    
 
-h1和.p1都拥有相同的属性红色。
+- 将请求发送到服务器。
+- string：仅用于 POST 请求
 
+#### 同步vs异步
+    xmlhttp.open("GET", "ajax_test.php", true);
 
-#### 5、派生选择器
-选择某个元素下的子元素，通常用于作用域隔离，如
-    
-    <style>
-        .mod-box h1{
-            color: red;
-        }
-    </style>
-    <h1>这是大标题</h1>
-    <div class="mod-box">
-        <h1>这是mod-box里的标题</h1>
-        <div class="content">这是mod-box的内容</div>
-    </div>
+第三个参数是true是异步，false是同步。
 
-让.mod-box里的h1变为红色，外面的h1不变色。
+当是`异步`时，浏览器把请求发送后就继续做自己的事，当onreadystatechange事件到来时说明服务端的数据来了，这时再处理数据。类似于一个节点绑定点击事件后就做后面的事，当用户点击了再执行绑定的处理函数。
 
-## 选择器汇总
-### 基础选择器
+当是`同步`时，JavaScript 会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。
+当使用 async=false 时，不用编写 onreadystatechange 函数，把代码放到 send() 语句后面即可：
 
-选择器 	| 含义
-:---	| :----
-\*		| 通用元素选择器，匹配页面任何元素（这也就决定了我们很少使用）
-\#id 	| id选择器，匹配特定id的元素
-.class	| 类选择器，匹配class**包含**(不是等于)特定类的元素
-element	| 标签选择器
+    xmlhttp.open("GET","ajax_test.php",false);
+    xmlhttp.send(); //这里发送后代码就卡在这里等待服务器响应
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText; 
 
-	* {
-		font-family: '微软雅黑';
-	}
+不推荐使用 async=false，但是对于一些小的简单的请求，也是偶尔可以用一下。
 
-	#id-selector{
-		color: #333;
-	}
+#### POST 请求
+一个简单 POST 请求：
 
-	.class-selector{
-		background: #f1f1f1;
-	}
-
-	p {
-		height: 50px;
-		line-height: 50px;
-	}
+    xmlhttp.open("POST","ajax_post.php",true);  // type为 POST
+    xmlhttp.send("name=kevin&age=100");    //send 要发送数据
 
 
 
-### 组合选择器
+### jquery ajax函数
+ajax() 方法通过 HTTP 请求加载远程数据。
 
-选择器			| 含义
-:---			| :---
-E,F				| 多元素选择器，用`,`分隔，同时匹配元素E或元素F
-E F				| 后代选择器，用空格分隔，匹配E元素所有的**后代**（不只是子元素、子元素向下递归）元素F
-E>F				| 子元素选择器，用`>`分隔，匹配E元素的所有**直接子元素**
-E+F				| 直接相邻选择器，匹配E元素之后的相邻的同级元素F
-E~F				| 普通相邻选择器（弟弟选择器），匹配E元素之后的同级元素F（无论直接相邻与否）
-.class1.class2	| id和class选择器和选择器连写的时候中间没有分隔符，`.` 和 `#` 本身充当分隔符的元素
-element#id		| id和class选择器和选择器连写的时候中间没有分隔符，`.` 和 `#` 本身充当分隔符的元素
+    $.ajax(opts);
 
-### 属性选择器
+opts为ajax所需的参数，为json格式
 
-选择器					| 含义
----						| ---
-E[attr]					| 匹配所有具有属性attr的元素，div[id]就能取到所有有id属性的div
-E[attr = value]			| 匹配属性attr值为value的元素，div[id=test],匹配id=test的div
-E[attr ~= value]		| 匹配所有属性attr具有多个空格分隔、其中一个值等于value的元素
-E[attr ^= value]		| 匹配属性attr的值以value**开头**的元素
-E[attr $= value]		| 匹配属性attr的值以value**结尾**的元素
-E[attr *= value]		| 匹配属性attr的值**包含**value的元素
+常用参数有：
 
-### 伪类选择器
+`url`: 后端接口地址
 
-选择器					|	含义
----						|	---
-E:first-child			|	匹配元素E的第一个子元素
-E:link					|	匹配所有未被点击的链接
-E:visited				|	匹配所有已被点击的链接
-E:active				|	匹配鼠标已经其上按下、还没有释放的E元素
-E:hover					|	匹配鼠标悬停其上的E元素
-E:focus					|	匹配获得当前焦点的E元素
-E:lang(c)				|	匹配lang属性等于c的E元素
-E:enabled				|	匹配表单中可用的元素
-E:disabled				|	匹配表单中禁用的元素
-E:checked				|	匹配表单中被选中的radio或checkbox元素
-E::selection			|	匹配用户当前选中的元素
-E:root					|	匹配文档的根元素，对于HTML文档，就是HTML元素
-E:nth-child(n)			|	匹配其父元素的第n个子元素，第一个编号为1
-E:nth-last-child(n)		|	匹配其父元素的倒数第n个子元素，第一个编号为1
-E:nth-of-type(n)		|	与:nth-child()作用类似，但是仅匹配使用同种标签的元素
-E:nth-last-of-type(n)	|	与:nth-last-child() 作用类似，但是仅匹配使用同种标签的元素
-E:last-child			|	匹配父元素的最后一个子元素，等同于:nth-last-child(1)
-E:first-of-type			|	匹配父元素下使用同种标签的第一个子元素，等同于:nth-of-type(1)
-E:last-of-type			|	匹配父元素下使用同种标签的最后一个子元素，等同于:nth-last-of-type(1)
-E:only-child			|	匹配父元素下仅有的一个子元素，等同于:first-child:last-child或 :nth-child(1):nth-last-child(1)
-E:only-of-type			|	匹配父元素下使用同种标签的唯一一个子元素，等同于:first-of-type:last-of-type或 :nth-of-type(1):nth-last-of-type(1)
-E:empty					|	匹配一个不包含任何子元素的元素，文本节点也被看作子元素
-E:not(selector)			|	匹配不符合当前选择器的任何元素
+`type`: 数据传输方式，GET或者POST
+
+`dataType`: 预期服务器返回的数据类型。常用为json、jsonp
+
+`data`: 发给服后端的数据
+
+`cache`: 是否开启缓存，默认为true开启
+
+`success`: 成功后的回调函数，返还的数据做为参数
+
+`error`: 接口失败的回调函数
+
+`complete`: 请求完成的回调函数
+
+如：
+ 
+        var opts = {
+            url: 'getMoreItem.php',
+            type: 'GET',
+            dataType: 'json',
+            data: {
+                name: 'xiaoming'
+            },
+            success: function(data){
+                console.log(data.items);
+            },
+            error: function(){
+                alert('error');
+            }
+        };
+        $.ajax(opts);
+
+### 跨域和jsonp
+
+本域指的是？
+
+- 同协议：如都是http或者https
+- 同域名：如都是http://1688.com/a 和http://1688.com/b
+- 同端口：如都是80端口
+
+
+jsonp可实现跨域，原理是
+
+1. 定义数据处理函数_fun
+2. 创建script标签，src的地址执行后端接口，最后加个参数callback=_fun
+3. 服务端在收到请求后，解析参数，计算返还数据，输出 fun(data) 字符串。
+4. fun(data)会放到script标签做为js执行。此时会调用fun函数，将data做为参数。
+
+    echo $cb . '&&' . $cb . '(' . json_encode($ret) . ')';
+
+
+
