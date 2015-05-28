@@ -10,10 +10,11 @@
 	* [字符串操作，数组操作、日期、数学函数、定时循环](fe-base/js2.md)
 	* [dom、jquery选择器、jquery事件、dom操作、遍历](fe-base/js3.md)
 	* [ajax, jquery ajax](fe-base/js4.md)
-* [开发调试](dev-debug/index.md)
+* [开发调试工具](dev-debug/index.md)
 	* [编辑器推荐](dev-debug/编辑器推荐.md)
 	* [chrome调试工具的使用](dev-debug/chrome调试工具的使用.md)
 	* [ps的使用](dev-debug/ps的使用.md)
+	* [git的使用](dev-debug/git的使用.md)
 * [环境流程](env-flow/index.md)
 	* neat的使用
 	* PC端环境搭建
