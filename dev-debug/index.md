@@ -1,7 +1,6 @@
-## IDE 编辑器
+## 工具、调试
 
-推荐：
-* sublime text3 http://www.sublimetext.com/3
-http://feliving.github.io/Sublime-Text-3-Documentation/
-安装，配置，插件
-* webstorm https://www.jetbrains.com/webstorm/
+* [编辑器推荐](chrome调试工具的使用.md)
+* [chrome调试工具使用](chrome调试工具的使用.md)
+* [ps的使用](ps的使用.md)
+* [git的使用](git的使用.md)
