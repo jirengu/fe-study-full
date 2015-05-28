@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>常见样式效果 | 前端学习文档</title>
+        <title>编辑器推荐 | 前端学习文档</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../fe-base/css3.html" />
+    <link rel="next" href="../dev-debug/chrome调试工具的使用.html" />
     
     
-    <link rel="prev" href="../fe-base/css1.html" />
+    <link rel="prev" href="../dev-debug/index.html" />
     
 
         
@@ -38,7 +38,7 @@
 
 
         
-    <div class="book" data-level="1.4" data-basepath=".." data-revision="1432796893148">
+    <div class="book" data-level="2.1" data-basepath=".." data-revision="1432796893148">
     
 
 <div class="book-summary">
@@ -135,7 +135,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.4" data-path="fe-base/css2.html">
+        <li class="chapter " data-level="1.4" data-path="fe-base/css2.html">
             
                 
                     <a href="../fe-base/css2.html">
@@ -285,7 +285,7 @@
                 
     
         
-        <li class="chapter " data-level="2.1" data-path="dev-debug/编辑器推荐.html">
+        <li class="chapter active" data-level="2.1" data-path="dev-debug/编辑器推荐.html">
             
                 
                     <a href="../dev-debug/编辑器推荐.html">
@@ -526,137 +526,16 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_14">
+                    <section class="normal" id="section-gitbook_6">
                     
-                        <h1 id="">常见样式效果</h1>
-<h2 id="width--height">width &amp; height</h2>
-<p>这两个属性用来定义元素的宽度和高度，使用很简单</p>
-<pre><code>&lt;div style=&quot;width:300px;&quot;&gt; 123 &lt;/div&gt;
-&lt;img src=&quot;https://www.baidu.com/img/bdlogo.png&quot; style=&quot;height:100px;&quot;/&gt;
-</code></pre><p>但这两个属性并不是所有的元素都生效</p>
-<p>对于<code>p</code>、<code>div</code>等独占一行的块元素是可以随意使用的，但是对于<code>span</code>等行内元素是不生效的，行内元素空间靠内容撑开</p>
-<h2 id="font">font、文本</h2>
-<ol>
-<li>font-size：字体大小</li>
-<li>font-family：字体，宋体、微软雅黑、Arial等</li>
-<li>font-weight：文字粗度，常用的就是默认值<code>regular</code>和粗体<code>bold</code></li>
-<li>line-height：行高，可以用百分比、倍数或者固定尺寸</li>
-</ol>
-<p>&nbsp;</p>
-<pre><code>span{
-  line-height: 1.5;
-  font-size: 14px;
-  font-family: Arial,&#39;微软雅黑&#39;,&#39;宋体&#39;;
-  font-weight:bold;
-}
-</code></pre><blockquote>
-<p>Chrome等浏览器规定汉字的最小尺寸是<code>12px</code>，所以设置更小的尺寸都显示为12px</p>
-</blockquote>
-<ol>
-<li>text-align：文本对其方式 <code>left</code>、<code>center</code>、<code>right</code>、<code>justify</code></li>
-<li>text-indent：文案第一行缩进距离</li>
-<li>text-decoration： <code>none</code>、<code>underline</code>、<code>line-through</code>、<code>overline</code></li>
-<li>color：文字颜色</li>
-</ol>
-<p>&nbsp;</p>
-<pre><code>    font:bold 12px/1.8em Arial;
-</code></pre><p>可以缩写为一句： 但文字缩写一定要具有字号、字体样式这两个属性。行高用<code>/</code>分隔</p>
-<h2 id="background">background</h2>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>background</td>
-<td>简写属性，作用是将背景属性设置在一个声明中</td>
-</tr>
-<tr>
-<td>background-attachment</td>
-<td>背景图像是否固定或者随着页面的其余部分滚动</td>
-</tr>
-<tr>
-<td>background-color</td>
-<td>设置元素的背景颜色</td>
-</tr>
-<tr>
-<td>background-image</td>
-<td>把图像设置为背景</td>
-</tr>
-<tr>
-<td>background-position</td>
-<td>设置背景图像的起始位置</td>
-</tr>
-<tr>
-<td>background-repeat</td>
-<td>设置背景图像是否及如何重复</td>
-</tr>
-</tbody>
-</table>
+                        <h2 id="ide-">IDE 编辑器</h2>
+<p>推荐：</p>
 <ul>
-<li><p>background-position：默认左上角</p>
-<ul>
-<li>x y</li>
-<li>x% y%</li>
-<li>[top | center | bottom] [left | center | right]</li>
+<li>sublime text3 <a href="http://www.sublimetext.com/3" target="_blank">http://www.sublimetext.com/3</a>
+<a href="http://feliving.github.io/Sublime-Text-3-Documentation/" target="_blank">http://feliving.github.io/Sublime-Text-3-Documentation/</a>
+安装，配置，插件</li>
+<li>webstorm <a href="https://www.jetbrains.com/webstorm/" target="_blank">https://www.jetbrains.com/webstorm/</a></li>
 </ul>
-</li>
-<li><p>background-repeat</p>
-<ul>
-<li>no-repeat：背景图片在规定位置</li>
-<li>repeat-x：图片横向重复</li>
-<li>repeat-y：图片纵向重复</li>
-<li>repeat：全部重复</li>
-</ul>
-</li>
-</ul>
-<p>&nbsp;</p>
-<pre><code>background-color: #F00;
-background-image: url(background.gif);
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: 0 0;
-</code></pre><p>可以缩写为一句：</p>
-<pre><code>  background: #F00 url(background.gif) no-repeat fixed 0 0;
-</code></pre><h2 id="border">border</h2>
-<ul>
-<li>border-width：边框宽度</li>
-<li>border-color：边框颜色</li>
-<li>border-style：边框样式（<code>solid</code>、<code>dashed</code>）</li>
-</ul>
-<p>支持合写</p>
-<pre><code>border: solid 1px #333;
-</code></pre><h2 id="padding">padding</h2>
-<p>padding代表内边距，有四个方向的值，可以合写</p>
-<ul>
-<li>padding-top</li>
-<li>padding-right</li>
-<li>padding-bottom</li>
-<li>padding-left</li>
-</ul>
-<p>值可以是数值也可以是百分比（相对于父容器、不是自身）</p>
-<pre><code>padding: 20px; /* padding: 20px 20px 20px 20px; */
-padding: 10px 20px; /* padding: 10px 20px 10px 20px; */
-padding: 10px 20px 30px; /* padding: 10px 20px 30px 20px; */
-</code></pre><h2 id="margin">margin</h2>
-<p>外边距，规则和padding一样，但是数值可以是负数，而且父边距在布局中十分有用处</p>
-<p><strong>水平对齐</strong></p>
-<p>对于宽度固定的块元素，设置左右margin值为<code>auto</code>可以达到元素水平对齐的效果</p>
-<pre><code>&lt;div style=&quot;width:600px;margin:0 auto;&quot;&gt;&lt;/div&gt;
-</code></pre><h2 id="display">display</h2>
-<p>用于设置元素的显示类型，常用的值有: none, inline, inline-block, block, table-cell;</p>
-<ul>
-<li>none: 隐藏该元素，不占用文档流</li>
-<li>inline: 以行内元素的形式展示</li>
-<li>inline-block: 行内块元素</li>
-<li>block: 块级别元素</li>
-<li>table-cell: 以表格方式展示，常用于垂直居中</li>
-</ul>
-<p><a href="http://jsbin.com/bunav/1/edit?html,output" target="_blank">例子：display</a></p>
-<p>display:none和visibility:hidden区别：</p>
 
                     
                     </section>
@@ -667,10 +546,10 @@ padding: 10px 20px 30px; /* padding: 10px 20px 30px 20px; */
         </div>
 
         
-        <a href="../fe-base/css1.html" class="navigation navigation-prev " aria-label="Previous page: CSS语法、常见选择器"><i class="fa fa-angle-left"></i></a>
+        <a href="../dev-debug/index.html" class="navigation navigation-prev " aria-label="Previous page: 开发调试"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../fe-base/css3.html" class="navigation navigation-next " aria-label="Next page: 盒模型"><i class="fa fa-angle-right"></i></a>
+        <a href="../dev-debug/chrome调试工具的使用.html" class="navigation navigation-next " aria-label="Next page: chrome调试工具的使用"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
