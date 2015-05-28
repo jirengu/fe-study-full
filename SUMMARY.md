@@ -10,7 +10,6 @@
 	* [字符串操作，数组操作、日期、数学函数、定时循环](fe-base/js2.md)
 	* [dom、jquery选择器、jquery事件、dom操作、遍历](fe-base/js3.md)
 	* [ajax, jquery ajax](fe-base/js4.md)
-	* 窗口、location、Navigator
 * [开发调试](tools/index.md)
 	* 编辑器的使用
 	* chrome调试工具的使用

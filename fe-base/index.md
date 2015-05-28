@@ -16,7 +16,7 @@
 * [字符串操作，数组操作、日期、数学函数、定时循环](js2.md)
 * [dom、jquery选择器、jquery事件、dom操作、遍历](js3.md)
 * [ajax, jsonp, jquery ajax](js4.md)
-* [窗口、location、Navigator](js5.md)
+
 
 参考资料
 * html：https://developer.mozilla.org/zh-CN/docs/Web/HTML
