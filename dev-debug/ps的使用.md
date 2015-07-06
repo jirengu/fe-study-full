@@ -1,4 +1,4 @@
-## IDE 编辑器
+## ps的使用
 
 推荐：
 * sublime text3 http://www.sublimetext.com/3
