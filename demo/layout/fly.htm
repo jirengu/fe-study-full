@@ -4,27 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>双飞翼布局</title>
+    <link href="http://style.c.aliimg.com/fdevlib/css/lofty/port/flying.css" rel="stylesheet" />
     <style>
     .layout {
         width: 990px;
         background: #999;
         margin: 10px auto;
         padding: 10px;
-        /*清除浮动*/
-        
-        overflow: hidden;
-        zoom: 1;
-    }
-    
-    .grid-main {
-        float: left;
-        width: 100%;
-        min-height: 1px;
-    }
-    
-    .grid-sub,
-    .grid-extra {
-        float: left;
     }
     /*两栏布局*/
     
@@ -35,7 +21,6 @@
     }
     
     .two .grid-sub {
-        float: left;
         width: 232px;
         margin-left: -232px;
         height: 200px;
