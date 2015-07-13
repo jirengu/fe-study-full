@@ -21,11 +21,21 @@
         border-bottom: 1px dashed #ccc;
         padding: 0 8px;
         margin-bottom: -1px;
+        height: 36px;
     }
     
     .nav li:hover {
         background: #f3f3f3;
         cursor: pointer;
+    }
+    
+    .nav li .text {
+        float: left;
+    }
+    
+    .nav li .arrow {
+        float: right;
+        color: #999;
     }
     </style>
 </head>
@@ -33,7 +43,9 @@
 <body>
     <div class="nav">
         <ul>
-            <li>菜单项</li>
+            <li>
+                <span class="text">菜单项</span><span class="arrow">&gt;</span>
+            </li>
             <li>菜单项</li>
             <li>菜单项</li>
             <li>菜单项</li>
