@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <title>offerlist</title>
     <style>
-    .offerlist {}
+    .offerlist {
+        color: #666;
+        line-height: 2;
+    }
+    
+    .offerlist p {
+        margin: 0;
+    }
     
     .offerlist ul {
         list-style: none;
@@ -36,11 +43,32 @@
     .offerlist dd {
         margin-left: 110px;
     }
+    
+    .piclist li {
+        float: left;
+        width: 200px;
+        margin: 10px;
+    }
+    
+    .piclist dt {
+        float: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .piclist dt img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+    .piclist dd {
+        margin-left: 0;
+    }
     </style>
 </head>
 
 <body>
-    <div class="offerlist">
+    <div class="offerlist piclist">
         <ul>
             <li>
                 <dl>
