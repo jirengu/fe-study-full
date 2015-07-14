@@ -143,6 +143,7 @@
         color: #666;
         line-height: 2;
         width: 422px;
+        margin: 10px 0;
     }
     
     .offerlist p {
@@ -151,6 +152,12 @@
     
     .offerlist ul {
         list-style: none;
+    }
+    
+    .offerlist ul:after {
+        content: "";
+        display: block;
+        clear: both;
     }
     
     .offerlist dl {
@@ -201,7 +208,7 @@
     }
     
     .piclist {
-        width: 920px;
+        width: 720px;
     }
     
     .piclist li {
@@ -223,4 +230,8 @@
     
     .piclist dd {
         margin-left: 0;
+    }
+    
+    .form {
+        text-align: right;
     }
