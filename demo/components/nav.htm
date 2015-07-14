@@ -31,7 +31,7 @@
         cursor: pointer;
     }
     
-    .nav li:hover .sub {
+    .nav li:hover .sub-nav {
         display: block;
     }
     
@@ -44,7 +44,7 @@
         color: #999;
     }
     
-    .nav li .sub {
+    .nav li .sub-nav {
         width: 100px;
         position: absolute;
         top: -1px;
@@ -109,11 +109,11 @@
         margin-top: -3px;
     }
     
-    .nav-inline .item:hover .sub {
+    .nav-inline .item:hover .sub-nav {
         display: block;
     }
     
-    .nav-inline .sub {
+    .nav-inline .sub-nav {
         display: none;
         position: absolute;
         left: 0;
@@ -124,7 +124,7 @@
         line-height: 2;
     }
     
-    .nav-inline .sub li {}
+    .nav-inline .sub-nav li {}
     </style>
 </head>
 
@@ -133,7 +133,7 @@
         <ul>
             <li>
                 <span class="text">菜单项</span><span class="arrow">&gt;</span>
-                <ul class="sub">
+                <ul class="sub-nav">
                     <li>子菜单</li>
                     <li>子菜单</li>
                     <li>子菜单</li>
@@ -149,7 +149,7 @@
         <ul>
             <li class="item first-item">
                 <span class="text">菜单项</span><span class="arrow">&gt;</span>
-                <ul class="sub">
+                <ul class="sub-nav">
                     <li>子菜单</li>
                     <li>子菜单</li>
                     <li>子菜单</li>
