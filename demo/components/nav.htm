@@ -12,8 +12,7 @@
     .nav ul {
         list-style: none;
         border: 1px solid #ccc;
-        padding: 0;
-        overflow: hidden;
+        padding: 0 10px;
     }
     
     .nav li {
@@ -22,11 +21,16 @@
         padding: 0 8px;
         margin-bottom: -1px;
         height: 36px;
+        position: relative;
     }
     
     .nav li:hover {
         background: #f3f3f3;
         cursor: pointer;
+    }
+    
+    .nav li:hover .sub {
+        display: block;
     }
     
     .nav li .text {
@@ -37,6 +41,14 @@
         float: right;
         color: #999;
     }
+    
+    .nav li .sub {
+        width: 100px;
+        position: absolute;
+        top: -1px;
+        right: -132px;
+        display: none;
+    }
     </style>
 </head>
 
@@ -45,6 +57,11 @@
         <ul>
             <li>
                 <span class="text">菜单项</span><span class="arrow">&gt;</span>
+                <ul class="sub">
+                    <li>子菜单</li>
+                    <li>子菜单</li>
+                    <li>子菜单</li>
+                </ul>
             </li>
             <li>菜单项</li>
             <li>菜单项</li>
