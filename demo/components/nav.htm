@@ -21,6 +21,8 @@
         padding: 0 8px;
         margin-bottom: -1px;
         height: 36px;
+        /* 用于子菜单定位 */
+        
         position: relative;
     }
     
@@ -58,6 +60,8 @@
         list-style: none;
         padding: 0;
         text-align: center;
+        line-height: 20px;
+        color: #666;
     }
     
     .nav-inline ul:after {
@@ -72,11 +76,55 @@
         border-left: 1px solid #ccc;
         padding: 0 10px;
         margin-left: -1px;
+        /* 用于子菜单定位 */
+        
+        position: relative;
+    }
+    
+    .nav-inline .first-item {
+        border-left: 0;
+    }
+    
+    .nav-inline .item:hover {
+        background: #f3f3f3;
+    }
+    
+    .nav-inline .arrow {
+        text-indent: -9999px;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .nav-inline .arrow:after {
+        content: '';
+        display: inline-block;
+        border: 5px dashed #ccc;
+        border-color: #ccc transparent transparent;
+        height: 0;
+        line-height: 0;
+        width: 0;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        margin-top: -3px;
+    }
+    
+    .nav-inline .item:hover .sub {
+        display: block;
     }
     
     .nav-inline .sub {
         display: none;
+        position: absolute;
+        left: 0;
+        top: 20px;
+        background: #f3f3f3;
+        width: 100px;
+        padding: 10px;
+        line-height: 2;
     }
+    
+    .nav-inline .sub li {}
     </style>
 </head>
 
@@ -99,7 +147,7 @@
     </div>
     <div class="nav-inline">
         <ul>
-            <li class="item">
+            <li class="item first-item">
                 <span class="text">菜单项</span><span class="arrow">&gt;</span>
                 <ul class="sub">
                     <li>子菜单</li>
