@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>浮动布局</title>
+    <link href="http://style.c.aliimg.com/fdevlib/css/lofty/port/lofty.css" rel="stylesheet"></link>
+    <link href="http://style.c.aliimg.com/fdevlib/css/lofty/ui/paging/2.0/back/paging-min.css" rel="stylesheet" />
+    <link href="http://style.c.aliimg.com/fdevlib/css/lofty/ui/button/2.1/back/button-min.css" rel="stylesheet" />
+    <link href="http://style.c.aliimg.com/fdevlib/css/lofty/ui/textbox/1.0/back/textbox-min.css" rel="stylesheet" />
+    <link href="demo.css" rel="stylesheet"></link>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="nav-inline">
+            <ul>
+                <li class="item first-item">
+                    <span class="text">菜单项</span><span class="arrow">&gt;</span>
+                    <ul class="sub-nav">
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                    </ul>
+                </li>
+                <li class="item">菜单项</li>
+                <li class="item">菜单项</li>
+                <li class="item">菜单项</li>
+                <li class="item">菜单项</li>
+            </ul>
+        </div>
+    </div>
+    <div class="layout">
+        <div class="sub">
+            <div class="nav">
+                <ul>
+                    <li>
+                        <span class="text">菜单项</span><span class="arrow">&gt;</span>
+                        <ul class="sub-nav">
+                            <li>子菜单</li>
+                            <li>子菜单</li>
+                            <li>子菜单</li>
+                        </ul>
+                    </li>
+                    <li>菜单项</li>
+                    <li>菜单项</li>
+                    <li>菜单项</li>
+                    <li>菜单项</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="offerlist piclist">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="http://img.china.alibaba.com/img/ibank/2015/170/568/2193865071_1721787264.270x270xz.jpg" alt="">
+                            </dt>
+                            <dd>
+                                <p class="title">韩版夏装新款清新碎花拼接甜美无袖连衣裙</p>
+                                <p class="info"><span class="price">&yen; 20.00</span><span class="count">已售 2254</span></p>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="http://img.china.alibaba.com/img/ibank/2015/509/803/2272308905_780040352.270x270xz.jpg" alt="">
+                            </dt>
+                            <dd>
+                                <p class="title">韩版夏装新款清新碎花拼接甜美无袖连衣裙</p>
+                                <p class="info"><span class="price">&yen; 20.00</span><span class="count">已售 2254</span></p>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="http://img.china.alibaba.com/img/ibank/2015/066/758/2208857660_1534238908.270x270xz.jpg" alt="">
+                            </dt>
+                            <dd>
+                                <p class="title">韩版夏装新款清新碎花拼接甜美无袖连衣裙</p>
+                                <p class="info"><span class="price">&yen; 20.00</span><span class="count">已售 2254</span></p>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="http://i02.c.aliimg.com/img/ibank/2015/679/428/2291824976_1231001909.270x270xz.jpg" alt="">
+                            </dt>
+                            <dd>
+                                <p class="title">韩版夏装新款清新碎花拼接甜美无袖连衣裙</p>
+                                <p class="info"><span class="price">&yen; 20.00</span><span class="count">已售 2254</span></p>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="fui-paging" id="static_paging" data-url="http://s.1688.com/selloffer/-BFD7C3F7B5C6.html?pageSize=40&beginPage={page}">
+                <span class="fui-paging-list">
+			<a href="#" target="_self" class="fui-prev"><span class="fui-icon-16">&#xe601;</span></a>
+                <a href="#" target="_self">1</a>
+                <span class="fui-omit">…</span>
+                <a href="#" target="_self">12</a>
+                <a href="#" target="_self">13</a>
+                <a href="#" target="_self" class="fui-current">14</a>
+                <a href="#" target="_self">15</a>
+                <a href="#" target="_self">16</a>
+                <span class="fui-omit">…</span>
+                <a href="#" target="_self" class="fui-next"><span class="fui-icon-16">&#xe602;</span></a>
+                </span>
+                <div class="fui-paging-form">
+                    <span class="fui-paging-total">共<em class="fui-paging-num">25</em>页</span>
+                    <span class="fui-number">
+				<span>到</span>
+                    <input maxlength="6" class="fui-paging-input fui-text">
+                    <span>页</span>
+                    </span>
+                    <span class="fui-forward">
+			  <button class="fui-paging-btn fui-btn">确定</button>
+			  
+			</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

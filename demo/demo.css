@@ -1,0 +1,226 @@
+    .layout {
+        width: 990px;
+        margin: auto;
+        padding: 10px;
+    }
+    
+    .sub {
+        float: left;
+        width: 200px;
+        height: 600px;
+        margin-right: 20px;
+    }
+    
+    .main {
+        float: left;
+        width: 770px;
+        height: 600px;
+    }
+    
+    .nav {
+        width: 200px;
+    }
+    
+    .nav ul {
+        list-style: none;
+        border: 1px solid #ccc;
+        padding: 0 10px;
+    }
+    
+    .nav li {
+        line-height: 2;
+        border-bottom: 1px dashed #ccc;
+        padding: 0 8px;
+        margin-bottom: -1px;
+        height: 36px;
+        /* 用于子菜单定位 */
+        
+        position: relative;
+    }
+    
+    .nav li:hover {
+        background: #f3f3f3;
+        cursor: pointer;
+    }
+    
+    .nav li:hover .sub-nav {
+        display: block;
+    }
+    
+    .nav li .text {
+        float: left;
+    }
+    
+    .nav li .arrow {
+        float: right;
+        color: #999;
+    }
+    
+    .nav li .sub-nav {
+        width: 100px;
+        position: absolute;
+        top: -1px;
+        right: -132px;
+        display: none;
+    }
+    
+    //横向菜单
+    .nav-inline {}
+    
+    .nav-inline ul {
+        zoom: 1;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        line-height: 20px;
+        color: #666;
+    }
+    
+    .nav-inline ul:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+    
+    .nav-inline .item {
+        float: left;
+        width: 100px;
+        border-left: 1px solid #ccc;
+        padding: 0 10px;
+        margin-left: -1px;
+        /* 用于子菜单定位 */
+        
+        position: relative;
+    }
+    
+    .nav-inline .first-item {
+        border-left: 0;
+    }
+    
+    .nav-inline .item:hover {
+        background: #f3f3f3;
+    }
+    
+    .nav-inline .arrow {
+        text-indent: -9999px;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .nav-inline .arrow:after {
+        content: '';
+        display: inline-block;
+        border: 5px dashed #ccc;
+        border-color: #ccc transparent transparent;
+        height: 0;
+        line-height: 0;
+        width: 0;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        margin-top: -3px;
+    }
+    
+    .nav-inline .item:hover .sub-nav {
+        display: block;
+    }
+    
+    .nav-inline .sub-nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 20px;
+        background: #f3f3f3;
+        width: 100px;
+        padding: 10px;
+        line-height: 2;
+    }
+    
+    .nav-inline .sub-nav li {}
+    /*offerlist*/
+    
+    .offerlist {
+        color: #666;
+        line-height: 2;
+        width: 422px;
+    }
+    
+    .offerlist p {
+        margin: 0;
+    }
+    
+    .offerlist ul {
+        list-style: none;
+    }
+    
+    .offerlist dl {
+        zoom: 1;
+    }
+    
+    .offerlist dl:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    
+    .offerlist dt {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #f3f3f3;
+        float: left;
+    }
+    
+    .offerlist dt img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+    .offerlist dd {
+        margin-left: 110px;
+    }
+    
+    .offerlist dd .info {
+        height: 20px;
+        line-height: 20px;
+    }
+    
+    .offerlist dd .title {
+        line-height: 24px;
+        padding: 5px 0;
+    }
+    
+    .offerlist dd .price {
+        color: #f60;
+        float: left;
+    }
+    
+    .offerlist dd .count {
+        color: #999;
+        float: right;
+        font-size: 12px;
+    }
+    
+    .piclist {
+        width: 920px;
+    }
+    
+    .piclist li {
+        float: left;
+        width: 200px;
+        margin: 10px;
+    }
+    
+    .piclist dt {
+        float: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .piclist dt img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+    .piclist dd {
+        margin-left: 0;
+    }
